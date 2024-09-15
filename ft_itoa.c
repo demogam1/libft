@@ -60,7 +60,6 @@ static void	filnewchar(int nbr, char *new, int i)
 char	*ft_itoa(int n)
 {
 	int		i;
-	int		p;
 	int		nbr;
 	char	*new;
 
@@ -68,7 +67,6 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	nbr = n;
 	i = len_nbr(nbr);
-	p = 0;
 	new = malloc(sizeof(char) * i + 1);
 	if (!new)
 		return (NULL);
@@ -76,7 +74,6 @@ char	*ft_itoa(int n)
 	{
 		new[0] = '-';
 		nbr = nbr * -1;
-		p++;
 	}
 	new[i] = '\0';
 	i--;
